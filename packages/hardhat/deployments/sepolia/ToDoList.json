@@ -1,0 +1,255 @@
+{
+  "address": "0x8C1Ed8319841CcE06BeD3F6333ad9E7f507d090C",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "content",
+          "type": "string"
+        }
+      ],
+      "name": "TaskCreated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "completed",
+          "type": "bool"
+        }
+      ],
+      "name": "TaskStatusToggled",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_content",
+          "type": "string"
+        }
+      ],
+      "name": "createTask",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTasks",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "content",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "completed",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct ToDoList.Task[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "taskCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "toggleCompleted",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xe30aa58d44c4591972b83b4b1e35a257630f065720104356301a3f5a34513f7a",
+  "receipt": {
+    "to": null,
+    "from": "0x7f5b2DB204937C03a3a67A77e2a632C16C1275D3",
+    "contractAddress": "0x8C1Ed8319841CcE06BeD3F6333ad9E7f507d090C",
+    "transactionIndex": 28,
+    "gasUsed": "429250",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xed8b2bf482cd1adb0684b1c8c5ce3d9c377feb71c42f65adbb317a30f854e7d7",
+    "transactionHash": "0xe30aa58d44c4591972b83b4b1e35a257630f065720104356301a3f5a34513f7a",
+    "logs": [],
+    "blockNumber": 10150817,
+    "cumulativeGasUsed": "6511827",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "06586e949dc9b415fd01151acd2d3cd9",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"content\",\"type\":\"string\"}],\"name\":\"TaskCreated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"completed\",\"type\":\"bool\"}],\"name\":\"TaskStatusToggled\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_content\",\"type\":\"string\"}],\"name\":\"createTask\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTasks\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"content\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"completed\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"internalType\":\"struct ToDoList.Task[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"taskCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"toggleCompleted\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/ToDoList.sol\":\"ToDoList\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/ToDoList.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity >=0.8.0 <0.9.0;\\r\\n\\r\\ncontract ToDoList {\\r\\n    struct Task {\\r\\n        uint256 id;\\r\\n        string content;\\r\\n        bool completed;\\r\\n        uint256 timestamp;\\r\\n    }\\r\\n\\r\\n    mapping(address => Task[]) private userTasks;\\r\\n    uint256 public taskCount;\\r\\n\\r\\n    event TaskCreated(address indexed user, uint256 id, string content);\\r\\n    event TaskStatusToggled(address indexed user, uint256 id, bool completed);\\r\\n\\r\\n    function createTask(string memory _content) public {\\r\\n        taskCount++;\\r\\n        userTasks[msg.sender].push(Task(taskCount, _content, false, block.timestamp));\\r\\n        emit TaskCreated(msg.sender, taskCount, _content);\\r\\n    }\\r\\n\\r\\n    function toggleCompleted(uint256 _index) public {\\r\\n        Task storage task = userTasks[msg.sender][_index];\\r\\n        task.completed = !task.completed;\\r\\n        emit TaskStatusToggled(msg.sender, task.id, task.completed);\\r\\n    }\\r\\n\\r\\n    function getTasks() public view returns (Task[] memory) {\\r\\n        return userTasks[msg.sender];\\r\\n    }\\r\\n}\",\"keccak256\":\"0x2de2f796049b605f5fc2da31731cb11873d527b0cda98087bac58fa0c4193a7f\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506106cd806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806304a87e3814610051578063111002aa1461006f578063455f502414610084578063b6cb58a514610097575b600080fd5b6100596100ae565b6040516100669190610383565b60405180910390f35b61008261007d366004610426565b6101d1565b005b6100826100923660046104d7565b6102a6565b6100a060015481565b604051908152602001610066565b33600090815260208181526040808320805482518185028101850190935280835260609492939192909184015b828210156101c8578382906000526020600020906004020160405180608001604052908160008201548152602001600182018054610118906104f0565b80601f0160208091040260200160405190810160405280929190818152602001828054610144906104f0565b80156101915780601f1061016657610100808354040283529160200191610191565b820191906000526020600020905b81548152906001019060200180831161017457829003601f168201915b5050509183525050600282015460ff16151560208083019190915260039092015460409091015290825260019290920191016100db565b50505050905090565b600180549060006101e18361052a565b9091555050336000908152602081815260408083208151608081018352600180548252818501878152938201869052426060830152825480820184559286529390942084516004909202019081559051909182019061024090826105a0565b5060408281015160028301805460ff1916911515919091179055606090920151600390910155600154905133917fa211005f5319202ee7ab6815fc340564635fb1eee9bc5a55aa10048c5b471dc49161029b91908590610660565b60405180910390a250565b3360009081526020819052604081208054839081106102c7576102c7610681565b600091825260209091206002600490920201908101805460ff19811660ff91821615908117909255825460405193945033937f3d1df5de1278f40041ffea0738fbb8d2c79d5b13724029c3cb3814b8a22627ad936103319316909182521515602082015260400190565b60405180910390a25050565b6000815180845260005b8181101561036357602081850181015186830182015201610347565b506000602082860101526020601f19601f83011685010191505092915050565b60006020808301818452808551808352604092508286019150828160051b87010184880160005b8381101561040257603f19898403018552815160808151855288820151818a8701526103d88287018261033d565b838a01511515878b01526060938401519390960192909252505093860193908601906001016103aa565b509098975050505050505050565b634e487b7160e01b600052604160045260246000fd5b60006020828403121561043857600080fd5b813567ffffffffffffffff8082111561045057600080fd5b818401915084601f83011261046457600080fd5b81358181111561047657610476610410565b604051601f8201601f19908116603f0116810190838211818310171561049e5761049e610410565b816040528281528760208487010111156104b757600080fd5b826020860160208301376000928101602001929092525095945050505050565b6000602082840312156104e957600080fd5b5035919050565b600181811c9082168061050457607f821691505b60208210810361052457634e487b7160e01b600052602260045260246000fd5b50919050565b60006001820161054a57634e487b7160e01b600052601160045260246000fd5b5060010190565b601f82111561059b57600081815260208120601f850160051c810160208610156105785750805b601f850160051c820191505b8181101561059757828155600101610584565b5050505b505050565b815167ffffffffffffffff8111156105ba576105ba610410565b6105ce816105c884546104f0565b84610551565b602080601f83116001811461060357600084156105eb5750858301515b600019600386901b1c1916600185901b178555610597565b600085815260208120601f198616915b8281101561063257888601518255948401946001909101908401610613565b50858210156106505787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b828152604060208201526000610679604083018461033d565b949350505050565b634e487b7160e01b600052603260045260246000fdfea2646970667358221220617a5f42d219e2c02acbd26a568c24ee3b450f54fd311b927f6eadd0659c383c64736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806304a87e3814610051578063111002aa1461006f578063455f502414610084578063b6cb58a514610097575b600080fd5b6100596100ae565b6040516100669190610383565b60405180910390f35b61008261007d366004610426565b6101d1565b005b6100826100923660046104d7565b6102a6565b6100a060015481565b604051908152602001610066565b33600090815260208181526040808320805482518185028101850190935280835260609492939192909184015b828210156101c8578382906000526020600020906004020160405180608001604052908160008201548152602001600182018054610118906104f0565b80601f0160208091040260200160405190810160405280929190818152602001828054610144906104f0565b80156101915780601f1061016657610100808354040283529160200191610191565b820191906000526020600020905b81548152906001019060200180831161017457829003601f168201915b5050509183525050600282015460ff16151560208083019190915260039092015460409091015290825260019290920191016100db565b50505050905090565b600180549060006101e18361052a565b9091555050336000908152602081815260408083208151608081018352600180548252818501878152938201869052426060830152825480820184559286529390942084516004909202019081559051909182019061024090826105a0565b5060408281015160028301805460ff1916911515919091179055606090920151600390910155600154905133917fa211005f5319202ee7ab6815fc340564635fb1eee9bc5a55aa10048c5b471dc49161029b91908590610660565b60405180910390a250565b3360009081526020819052604081208054839081106102c7576102c7610681565b600091825260209091206002600490920201908101805460ff19811660ff91821615908117909255825460405193945033937f3d1df5de1278f40041ffea0738fbb8d2c79d5b13724029c3cb3814b8a22627ad936103319316909182521515602082015260400190565b60405180910390a25050565b6000815180845260005b8181101561036357602081850181015186830182015201610347565b506000602082860101526020601f19601f83011685010191505092915050565b60006020808301818452808551808352604092508286019150828160051b87010184880160005b8381101561040257603f19898403018552815160808151855288820151818a8701526103d88287018261033d565b838a01511515878b01526060938401519390960192909252505093860193908601906001016103aa565b509098975050505050505050565b634e487b7160e01b600052604160045260246000fd5b60006020828403121561043857600080fd5b813567ffffffffffffffff8082111561045057600080fd5b818401915084601f83011261046457600080fd5b81358181111561047657610476610410565b604051601f8201601f19908116603f0116810190838211818310171561049e5761049e610410565b816040528281528760208487010111156104b757600080fd5b826020860160208301376000928101602001929092525095945050505050565b6000602082840312156104e957600080fd5b5035919050565b600181811c9082168061050457607f821691505b60208210810361052457634e487b7160e01b600052602260045260246000fd5b50919050565b60006001820161054a57634e487b7160e01b600052601160045260246000fd5b5060010190565b601f82111561059b57600081815260208120601f850160051c810160208610156105785750805b601f850160051c820191505b8181101561059757828155600101610584565b5050505b505050565b815167ffffffffffffffff8111156105ba576105ba610410565b6105ce816105c884546104f0565b84610551565b602080601f83116001811461060357600084156105eb5750858301515b600019600386901b1c1916600185901b178555610597565b600085815260208120601f198616915b8281101561063257888601518255948401946001909101908401610613565b50858210156106505787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b828152604060208201526000610679604083018461033d565b949350505050565b634e487b7160e01b600052603260045260246000fdfea2646970667358221220617a5f42d219e2c02acbd26a568c24ee3b450f54fd311b927f6eadd0659c383c64736f6c63430008140033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 16,
+        "contract": "contracts/ToDoList.sol:ToDoList",
+        "label": "userTasks",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_array(t_struct(Task)10_storage)dyn_storage)"
+      },
+      {
+        "astId": 18,
+        "contract": "contracts/ToDoList.sol:ToDoList",
+        "label": "taskCount",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_struct(Task)10_storage)dyn_storage": {
+        "base": "t_struct(Task)10_storage",
+        "encoding": "dynamic_array",
+        "label": "struct ToDoList.Task[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_array(t_struct(Task)10_storage)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct ToDoList.Task[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_struct(Task)10_storage)dyn_storage"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Task)10_storage": {
+        "encoding": "inplace",
+        "label": "struct ToDoList.Task",
+        "members": [
+          {
+            "astId": 3,
+            "contract": "contracts/ToDoList.sol:ToDoList",
+            "label": "id",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 5,
+            "contract": "contracts/ToDoList.sol:ToDoList",
+            "label": "content",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 7,
+            "contract": "contracts/ToDoList.sol:ToDoList",
+            "label": "completed",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_bool"
+          },
+          {
+            "astId": 9,
+            "contract": "contracts/ToDoList.sol:ToDoList",
+            "label": "timestamp",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "128"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

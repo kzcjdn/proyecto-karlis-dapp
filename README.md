@@ -1,80 +1,37 @@
-# 🏗 Scaffold-ETH 2
+# ✅ ToDo List DApp - Karlis Zambrano
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+Este proyecto es una aplicación descentralizada (DApp) de lista de tareas, construida como parte de mi aprendizaje en desarrollo Web3. Permite a los usuarios grabar tareas directamente en la blockchain de **Sepolia**.
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+## 🚀 Mi Actividad Realizada
+Para completar este proyecto, realicé las siguientes acciones técnicas:
+- **Smart Contract**: Desarrollé un contrato inteligente `ToDoList.sol` para gestionar tareas de forma inmutable.
+- **Despliegue**: Desplegué el contrato en la red de prueba **Sepolia** en la dirección `0x8C1Ed8319841CcE06BEd3F6333ad9E7f507d090C`.
+- **Verificación**: Verifiqué el código en **Etherscan**, obteniendo la tilde verde ✅ de transparencia.
+- **Frontend**: Personalicé la interfaz usando **Scaffold-ETH 2** y Next.js, conectándola a la red real.
+- **Hosting**: Publiqué la DApp en **Vercel** para acceso público.
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
+## 🛠️ Tecnologías Usadas
+Este proyecto utiliza el stack de **Scaffold-ETH 2**:
+- **Solidity** para el contrato inteligente.
+- **NextJS** y **Tailwind CSS** para la interfaz.
+- **Viem & Wagmi** para la interacción con la billetera.
+- **Hardhat** para el entorno de desarrollo y despliegue.
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+🧠 Lógica del Contrato Inteligente (ToDoList.sol)
+El corazón de esta DApp es un contrato escrito en Solidity, diseñado para ser eficiente y seguro. Estas son sus funcionalidades principales:
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+Estructura de Datos: Utilicé un struct Task para almacenar el contenido de la tarea y su estado (completada o pendiente).
 
-## Requirements
+Gestión de Usuarios: El contrato utiliza un mapping(address => Task[]) para asegurar que cada usuario vea únicamente sus propias tareas, manteniendo la privacidad de la información.
 
-Before you begin, you need to install the following tools:
+Funciones Principales:
 
-- [Node (>= v20.18.3)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
+createTask: Permite guardar un nuevo string en la blockchain, emitiendo un evento para que el frontend se actualice automáticamente.
 
-## Quickstart
+toggleCompleted: Cambia el estado de una tarea de pendiente a completada directamente en el almacenamiento de la red Sepolia.
 
-To get started with Scaffold-ETH 2, follow the steps below:
+Optimización: El contrato fue verificado en Etherscan, lo que permite interactuar con estas funciones incluso sin usar la interfaz de Vercel.
 
-1. Install dependencies if it was skipped in CLI:
-
-```
-cd my-dapp-example
-yarn install
-```
-
-2. Run a local network in the first terminal:
-
-```
-yarn chain
-```
-
-This command starts a local Ethereum network using Hardhat. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `packages/hardhat/hardhat.config.ts`.
-
-3. On a second terminal, deploy the test contract:
-
-```
-yarn deploy
-```
-
-This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
-
-4. On a third terminal, start your NextJS app:
-
-```
-yarn start
-```
-
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
-
-Run smart contract test with `yarn hardhat:test`
-
-- Edit your smart contracts in `packages/hardhat/contracts`
-- Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
-- Edit your deployment scripts in `packages/hardhat/deploy`
-
-
-## Documentation
-
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
-
-To know more about its features, check out our [website](https://scaffoldeth.io).
-
-## Contributing to Scaffold-ETH 2
-
-We welcome contributions to Scaffold-ETH 2!
-
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+## 🔗 Enlaces del Proyecto
+- **DApp en Vivo**: [https://proyecto-karlis-dapp-nextjs.vercel.app/](https://proyecto-karlis-dapp-nextjs.vercel.app/)
+- **Contrato en Etherscan**: [https://sepolia.etherscan.io/address/0x8C1Ed8319841CcE06BEd3F6333ad9E7f507d090C](https://sepolia.etherscan.io/address/0x8C1Ed8319841CcE06BEd3F6333ad9E7f507d090C)
